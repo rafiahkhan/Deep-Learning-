@@ -1,5 +1,5 @@
 
-**Deep Learning Assignment-1: Facial Expression Recognition + Valence/Arousal**
+**Facial Expression Recognition + Valence/Arousal**
 
 ---
 
