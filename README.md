@@ -2,7 +2,7 @@
 ## Facial Expression Recognition + Valence/Arousal 
 Facial emotion recognition combines classification and regression tasks to analyze human affect from images.This project focuses on predicting facial expressions along with continuous valence and arousal values using convolutional neural networks.Both custom and transfer learning models are evaluated for accuracy and training efficiency.
 
-# 1) Overview
+### 1) Overview
 
 This repo contains the code and results for training three CNN baselines on the **Facial Expression** task (8 classes) and **Valence** regression (Arousal optional). The models compared:
 
@@ -12,7 +12,7 @@ This repo contains the code and results for training three CNN baselines on the 
 
 Key outputs include: training curves, validation metrics, and a short discussion of results & next steps.
 
-# 2) Dataset
+### 2) Dataset
 
 * **Total images:** 3,999
 * **Expression classes (balanced ~500 each):** Neutral, Happy, Sad, Surprise, Fear, Disgust, Anger, Contempt
@@ -23,7 +23,7 @@ Key outputs include: training curves, validation metrics, and a short discussion
 > EDA figures (class histograms, valence/arousal histograms, V-A scatter) are included in the screenshots.
 
 
-# 3) Environment
+### 3) Environment
 
 * Python 3.x, TensorFlow/Keras
 * Suggested packages: `tensorflow`, `numpy`, `pandas`, `scikit-learn`, `matplotlib`, `albumentations`/`imgaug` (optional)
@@ -34,7 +34,7 @@ pip install tensorflow numpy pandas scikit-learn matplotlib
 
 ---
 
-## 4) How to Run
+### 4) How to Run
 
 > The main script is `ass1.py`. Paths inside the script expect folders:
 
@@ -61,9 +61,9 @@ Common training setup:
 
 ---
 
-## 5) Model Architectures
+### 5) Model Architectures
 
-### Transfer Learning (VGG16 / ResNet50)
+#### Transfer Learning (VGG16 / ResNet50)
 
 ```
 Backbone (ImageNet, frozen)
@@ -75,7 +75,7 @@ Backbone (ImageNet, frozen)
    • Valence/Arousal: Dense(1, linear)
 ```
 
-### Custom CNN (from scratch)
+#### Custom CNN (from scratch)
 
 ```
 4× [Conv2D → BatchNorm → MaxPool → Dropout]
@@ -89,9 +89,9 @@ Backbone (ImageNet, frozen)
 
 ---
 
-## 6) Results
+### 6) Results
 
-### 6.1 Expression (8-class) — Validation Accuracy & Training Time
+#### 6.1 Expression (8-class) — Validation Accuracy & Training Time
 
 | Model             | Val Accuracy |     ~Train Time |
 | ----------------- | -----------: | --------------: |
@@ -103,7 +103,7 @@ Backbone (ImageNet, frozen)
 
 ---
 
-### 6.2 Valence (Regression) — Validation MAE/MSE & Training Time
+#### 6.2 Valence (Regression) — Validation MAE/MSE & Training Time
 
 | Model             |    Val MAE |    Val MSE |     ~Train Time | Notes                  |
 | ----------------- | ---------: | ---------: | --------------: | ---------------------- |
@@ -117,7 +117,7 @@ Backbone (ImageNet, frozen)
 
 ---
 
-## 7) Training Curves & Samples 
+### 7) Training Curves & Samples 
 
 * Expression: loss↓ & accuracy↑ for **Custom CNN**, **VGG16**, **ResNet50**
 * Valence: loss/MAE curves for **VGG16**, **ResNet50**, **Custom CNN** (new)
@@ -125,7 +125,7 @@ Backbone (ImageNet, frozen)
 
 ---
 
-## 8) Discussion & Recommendations
+### 8) Discussion & Recommendations
 
 * **Expression:** Custom CNN likely matches data scale and regularisation needs → best accuracy.
   *Next:* try label smoothing, longer training, or unfreeze TL top blocks to see if VGG16 can surpass.
@@ -135,7 +135,7 @@ Backbone (ImageNet, frozen)
 
 ---
 
-## 9) License / Acknowledgements
+### 9) License / Acknowledgements
 
 * Backbones: `tf.keras.applications` (ImageNet weights)
 
