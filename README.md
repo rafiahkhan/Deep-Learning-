@@ -1,8 +1,6 @@
 
 **Facial Expression Recognition + Valence/Arousal**
 
----
-
 ## 1) Overview
 
 This repo contains the code and results for training three CNN baselines on the **Facial Expression** task (8 classes) and **Valence** regression (Arousal optional). The models compared:
@@ -12,8 +10,6 @@ This repo contains the code and results for training three CNN baselines on the 
 * **ResNet50 (transfer learning, ImageNet)**
 
 Key outputs include: training curves, validation metrics, and a short discussion of results & next steps.
-
----
 
 ## 2) Dataset
 
@@ -25,7 +21,6 @@ Key outputs include: training curves, validation metrics, and a short discussion
 
 > EDA figures (class histograms, valence/arousal histograms, V-A scatter) are included in the screenshots.
 
----
 
 ## 3) Environment
 
@@ -51,7 +46,7 @@ Dataset/
 Typical usage:
 
 ```bash
-python ass1.py                # trains baselines (expression + valence), saves logs/plots
+python Deep_Learning.py                # trains baselines (expression + valence), saves logs/plots
 ```
 
 Common training setup:
@@ -142,4 +137,4 @@ Backbone (ImageNet, frozen)
 ## 9) License / Acknowledgements
 
 * Backbones: `tf.keras.applications` (ImageNet weights)
-* This README summarises experiments conducted by **Rafia (i222054)** for Assignment-1.
+
