@@ -36,7 +36,7 @@ pip install tensorflow numpy pandas scikit-learn matplotlib
 
 ### 4) How to Run
 
-> The main script is `ass1.py`. Paths inside the script expect folders:
+> The main script is `Deep_Learning.py`. Paths inside the script expect folders:
 
 ```
 Dataset/
