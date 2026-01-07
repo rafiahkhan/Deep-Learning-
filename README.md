@@ -1,5 +1,5 @@
 
-**Facial Expression Recognition + Valence/Arousal**
+### Facial Expression Recognition + Valence/Arousal 
 
 ## 1) Overview
 
