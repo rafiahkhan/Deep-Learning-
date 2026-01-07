@@ -1,7 +1,8 @@
 
-### Facial Expression Recognition + Valence/Arousal 
+## Facial Expression Recognition + Valence/Arousal 
+Facial emotion recognition combines classification and regression tasks to analyze human affect from images.This project focuses on predicting facial expressions along with continuous valence and arousal values using convolutional neural networks.Both custom and transfer learning models are evaluated for accuracy and training efficiency.
 
-## 1) Overview
+# 1) Overview
 
 This repo contains the code and results for training three CNN baselines on the **Facial Expression** task (8 classes) and **Valence** regression (Arousal optional). The models compared:
 
@@ -11,7 +12,7 @@ This repo contains the code and results for training three CNN baselines on the 
 
 Key outputs include: training curves, validation metrics, and a short discussion of results & next steps.
 
-## 2) Dataset
+# 2) Dataset
 
 * **Total images:** 3,999
 * **Expression classes (balanced ~500 each):** Neutral, Happy, Sad, Surprise, Fear, Disgust, Anger, Contempt
@@ -22,7 +23,7 @@ Key outputs include: training curves, validation metrics, and a short discussion
 > EDA figures (class histograms, valence/arousal histograms, V-A scatter) are included in the screenshots.
 
 
-## 3) Environment
+# 3) Environment
 
 * Python 3.x, TensorFlow/Keras
 * Suggested packages: `tensorflow`, `numpy`, `pandas`, `scikit-learn`, `matplotlib`, `albumentations`/`imgaug` (optional)
